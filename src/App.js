@@ -1,26 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./css/custom-theme.scss";
+import { observer} from "mobx-react";
+import history from './api-functions/history';
+import Routes from "./routes/routesComponent";
+import {mainStore} from './stores/mainStore';
+import firebase from 'firebase';
+import config from './firebaseConfig';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+firebase.initializeApp(config);
+
+class App extends React.Component{
+
+  componentDidMount(props){
+    firebase.auth().onAuthStateChanged(function(user){
+      if(user){
+        const uid = user.uid;
+        mainStore.setUid(uid);
+        history.push('/app');
+      }
+      else{
+        mainStore.setUid(null);
+        history.push('/auth');
+      }
+    });
+  }
+
+  render(){
+    return(
+      <Routes/>
+    );
+  }
+
 }
 
-export default App;
+export default observer(App);
