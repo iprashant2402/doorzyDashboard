@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/doorzyDashboard/static/css/main.819b6915.chunk.css",
+    "main.js": "/doorzyDashboard/static/js/main.38fd30c3.chunk.js",
+    "main.js.map": "/doorzyDashboard/static/js/main.38fd30c3.chunk.js.map",
+    "runtime~main.js": "/doorzyDashboard/static/js/runtime~main.dcf4054b.js",
+    "runtime~main.js.map": "/doorzyDashboard/static/js/runtime~main.dcf4054b.js.map",
+    "static/js/2.0bd75f73.chunk.js": "/doorzyDashboard/static/js/2.0bd75f73.chunk.js",
+    "static/js/2.0bd75f73.chunk.js.map": "/doorzyDashboard/static/js/2.0bd75f73.chunk.js.map",
+    "index.html": "/doorzyDashboard/index.html",
+    "precache-manifest.faefd2be2acb548fb643a317b85711b6.js": "/doorzyDashboard/precache-manifest.faefd2be2acb548fb643a317b85711b6.js",
+    "service-worker.js": "/doorzyDashboard/service-worker.js",
+    "static/css/main.819b6915.chunk.css.map": "/doorzyDashboard/static/css/main.819b6915.chunk.css.map",
+    "static/media/logo_1.png": "/doorzyDashboard/static/media/logo_1.486401b5.png",
+    "static/media/logo_alternate_plain.png": "/doorzyDashboard/static/media/logo_alternate_plain.0ef8dae3.png"
+  }
+}
