@@ -1,5 +1,5 @@
 {
-  "name": "virestore-business",
+  "name": "doorzy-dashboard",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -12,18 +12,22 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.1",
-    "react-scripts": "3.0.1"
+    "react-scripts": "3.0.1",
+    "shards-react": "^1.0.3"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
   },
   "proxy": "http://localhost:8080",
   "eslintConfig": {
     "extends": "react-app"
   },
+  "homepage": "http://iprashant2402.github.io/doorzyDashboard",
   "browserslist": {
     "production": [
       ">0.2%",
@@ -41,6 +45,7 @@
     "@babel/core": "^7.4.5",
     "@babel/plugin-proposal-class-properties": "^7.4.4",
     "@babel/plugin-proposal-decorators": "^7.4.4",
-    "babel-preset-mobx": "^2.0.0"
+    "babel-preset-mobx": "^2.0.0",
+    "gh-pages": "^2.1.1"
   }
 }

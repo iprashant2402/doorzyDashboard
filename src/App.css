@@ -2,6 +2,44 @@
   text-align: center;
 }
 
+body {
+  background: #121212;
+  color: rgb(255,255,255,0.7);
+}
+
+.nav-item{
+  color: rgb(255,255,255,0.7);
+  text-decoration: none;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.orange-font{
+  color : #ffc68a;
+}
+
+.dark-input{
+  border : #686868;
+  background: #686868;
+  color: #fff;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.margin-vertical {
+  margin-bottom: 20px;
+}
+
+.padding-vertical {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.dark-card{
+  background: #272727;
+  margin-bottom: 10px;
+}
+
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
@@ -21,6 +59,25 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.counter-title{
+  color: rgb(255,255,255,0.7);
+  font-size: 20;
+}
+
+.large-count{
+  color: #fff;
+  font-size: 200px;
+}
+
+.center-div{
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  justify-items: center;
+  padding: auto;
+  text-align: center;
 }
 
 @keyframes App-logo-spin {

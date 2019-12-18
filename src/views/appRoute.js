@@ -3,6 +3,7 @@ import { observer } from "mobx-react";
 import ".././css/custom-theme.scss";
 import {Switch,Route,Redirect} from 'react-router-dom';
 import OverviewPage from './app/overviewPage';
+import Dashboard from './app/dashboard';
 import NoMatch from './noMatch';
 import {mainStore} from '.././stores/mainStore';
 import {
@@ -21,10 +22,13 @@ const AppRoute = ({match},props) => {
   return (
     <Switch>
         <Route exact path={`${match.path}`} render={
-            ()=>(user?(<Redirect to={`${match.path}/overview`}/>):(<Redirect to="/auth"/>))
+            ()=>(user?(<Redirect to={`${match.path}/dashboard`}/>):(<Redirect to="/auth"/>))
         }/>
         <Route path={`${match.path}/overview`} render={
             ()=>(user?(<OverviewPage/>):(<Redirect to="/auth"/>))
+        } />
+        <Route path={`${match.path}/dashboard`} render={
+            ()=>(user?(<Dashboard/>):(<Redirect to="/auth"/>))
         } />
         <Route component={NoMatch}/>
     </Switch>

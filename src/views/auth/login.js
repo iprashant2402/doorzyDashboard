@@ -41,7 +41,7 @@ import {mainStore} from '../.././stores/mainStore';
               <div className="col-md-12 col-sm-12">
                 <h4 className="text-center">Sign In</h4>
                 <p className="text-center text-secondary">
-                  Continue to your Virestore Seller Account
+                  Continue to your doorzy admin account
                 </p>
               </div>
             </div>
@@ -83,7 +83,7 @@ import {mainStore} from '../.././stores/mainStore';
             <div className="row p-2 fixed-bottom">
               <div className="col-sm-12 col-md-8 offset-md-2 px-2">
                 <p className="text-secondary text-center">
-                  &copy; Copyright 2019. Virestore Inc.
+                  &copy; Copyright 2019. Doorzy Inc.
                 </p>
               </div>
             </div>

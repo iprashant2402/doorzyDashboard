@@ -5,4 +5,4 @@ export const MY_ACCOUNT = '/account';
 export const ORDER_HISTORY = '/orderHistory';
 export const OVERVIEW = '/overview';
 export const SETTINGS = '/settings';
-export const TRACK_PAYMENT = '/trackPayments'
+export const DASHBOARD = '/dashboard'
