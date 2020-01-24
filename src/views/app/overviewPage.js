@@ -194,6 +194,9 @@ class OverviewPage extends React.Component {
               <NavItem>
               <Link className="nav-item" to='/app/dashboard'>Overview</Link>
               </NavItem>
+              <NavItem>
+              <Link className="nav-item" to='/app/outletSettings'>Outlet Settings</Link>
+              </NavItem>
             </Nav>
             <Nav navbar className="ml-auto">
               <Button

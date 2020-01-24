@@ -4,6 +4,7 @@ import ".././css/custom-theme.scss";
 import {Switch,Route,Redirect} from 'react-router-dom';
 import OverviewPage from './app/overviewPage';
 import Dashboard from './app/dashboard';
+import OutletSettings from './app/settingsPage';
 import NoMatch from './noMatch';
 import {mainStore} from '.././stores/mainStore';
 import {
@@ -29,6 +30,9 @@ const AppRoute = ({match},props) => {
         } />
         <Route path={`${match.path}/dashboard`} render={
             ()=>(user?(<Dashboard/>):(<Redirect to="/auth"/>))
+        } />
+        <Route path={`${match.path}/outletSettings`} render={
+            ()=>(user?(<OutletSettings/>):(<Redirect to="/auth"/>))
         } />
         <Route component={NoMatch}/>
     </Switch>
