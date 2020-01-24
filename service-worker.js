@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/doorzyDashboard/precache-manifest.f01534c83f6b0ec456f487df2889edd8.js"
+  "/doorzyDashboard/precache-manifest.b487d296b40e1d9401fba26b73007ba0.js"
 );
 
 self.addEventListener('message', (event) => {
