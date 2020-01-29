@@ -127,14 +127,17 @@ class OutletSettings extends React.Component {
       this.setState({
         selectedOutletId : id
       });
+      console.log(id);
       const db = firebase.firestore().collection("menus").doc(id).collection("items");
       const thisRef = this;
       db.get().then((snap=>{
+        console.log("settings 134");
           if(snap){
               var arr = [];
+              console.log(snap);
               snap.forEach(function(item){
                 if(item.data().active===true || item.data().active===false){
-                  arr.push(item.data());  
+                  arr.push(item.data());
                 }  
                 else{
                   var doc = item.data();
@@ -145,6 +148,9 @@ class OutletSettings extends React.Component {
               thisRef.setState({
                 menu : arr
               });
+          }
+          else{
+            console.log("No snap");
           }
       })).catch(err => console.log(err));
   }

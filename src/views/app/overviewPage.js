@@ -16,15 +16,19 @@ import {
   Col,
   Card,
   CardBody,
-  Alert
+  Alert,
+  ListGroup,
+  ListGroupItem,
+  ListGroupItemHeading,
+  ListGroupItemText
 } from "shards-react";
 import {
   BrowserRouter as Router,
   Route,
   Link,
-  Switch,
   Redirect
 } from "react-router-dom";
+import Switch from "react-switch";
 import firebase from "firebase";
 import "firebase/firestore";
 import "../../App.css";
@@ -39,7 +43,8 @@ class OverviewPage extends React.Component {
       content: "",
       selectValue: [],
       collapseOpen: false,
-      alert: false
+      alert: false,
+      recentUsers: []
     };
   }
 
@@ -90,11 +95,27 @@ class OverviewPage extends React.Component {
     db.get()
       .then(function(snap) {
         var arr = [];
+        var recent = [];
         snap.forEach(function(doc) {
           arr.push(doc.data());
         });
+        recent = arr;
+        arr.sort(function(a,b){
+          if(a.fname > b.fname){
+            return 1;
+          }
+          if(a.fname < b.fname){
+            return -1;
+          }
+          return 0;
+        });
+        recent.sort(function(a,b){
+          return b.regTimestamp - a.regTimestamp;
+        });
+        recent = recent.slice(0,10);
         thisRef.setState({
-          users: arr
+          users: arr,
+          recentUsers : recent
         });
       })
       .catch(err => console.log(err));
@@ -174,6 +195,11 @@ class OverviewPage extends React.Component {
         {l.fname} {l.lname}
       </option>
     ));
+    const userList2 = this.state.recentUsers.map((l,i) => (
+      <ListGroupItem className="dark-bg" key={i}>
+  <ListGroupItemText>{l.fname} {l.lname}</ListGroupItemText>
+      </ListGroupItem>
+    ));
     if(this.state.alert){
       const alert = <Alert theme="success">Push Notifications successfully sent.</Alert>;
     }
@@ -221,6 +247,7 @@ class OverviewPage extends React.Component {
               <h6 className="orange-font">Select users :</h6>
               <select
                 className="dark-input"
+                size={21}
                 multiple={true}
                 value={this.state.selectValue}
                 onChange={e => {
@@ -277,12 +304,24 @@ class OverviewPage extends React.Component {
               >
                 Send
               </Button>
+              <br/><br/>
+              <h2>10 Recent Sign ups</h2>
+              <ListGroup>
+                  {userList2}
+                </ListGroup>
               </Col>
               </Row>
             </Col>
             </Row>
             </CardBody>
           </Card>
+          {/* <Card className="dark-card">
+            <CardBody>
+                <ListGroup>
+                  {userList2}
+                </ListGroup>
+            </CardBody>
+          </Card> */}
         </Container>
       </Container>
     );
