@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "fb9b228e3dc366b14f2b2d5c9c247521",
+    "revision": "9e9019b6936b915b462ee087a6afe535",
     "url": "/doorzyDashboard/index.html"
   },
   {
-    "revision": "8cf6cac1356e380ce962",
+    "revision": "8109424a1f0144a98914",
     "url": "/doorzyDashboard/static/css/main.655cc48f.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/doorzyDashboard/static/js/2.d41ce17d.chunk.js"
   },
   {
-    "revision": "8cf6cac1356e380ce962",
-    "url": "/doorzyDashboard/static/js/main.8b30bee0.chunk.js"
+    "revision": "8109424a1f0144a98914",
+    "url": "/doorzyDashboard/static/js/main.a90ac1d3.chunk.js"
   },
   {
     "revision": "63ebed5c37a76815d389",
